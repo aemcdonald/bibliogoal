@@ -7,10 +7,11 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter } from 'react-router-dom';
 import { composeWithDevTools } from 'redux-devtools-extension';
+import allReducers from './reducers/index.js';
 
 const store = createStore(
-  reducers,
-  composeWithDevTools(applyMiddleware(thunk))
+  allReducers
+  //composeWithDevTools(applyMiddleware(thunk))
 );
 
 ReactDOM.render(
