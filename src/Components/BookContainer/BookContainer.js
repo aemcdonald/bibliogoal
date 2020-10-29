@@ -18,8 +18,6 @@ class BookContainer extends Component {
   // refactor to set user message into state depending on where state will be stored
   }
 
-
-
   render() {
     return (
       <main>
