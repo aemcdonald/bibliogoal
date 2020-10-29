@@ -9,7 +9,15 @@ class Search extends Component {
 
   render() {
     return (
-      <h3>Search goes here</h3>
+      <select
+      className='search-menu'
+      name='list-genre'
+      >
+        <option value='Hardcover Fiction'>Fiction</option>
+        <option value='Hardcover Nonfiction'>Nonfiction</option>
+        <option value='Celebrities'>Celebrities</option>
+        <option value='Crime and Punishment'>Crime Fiction</option>
+      </select>
     )
   }
 }
