@@ -11,7 +11,7 @@ class BookContainer extends Component {
   }
 
   componentDidMount = async () => {
-    const bookList = await getBooks()
+    const bookList = await getBooks('Hardcover Fiction')
     const allBooks = bookList.results.books
     this.props.getInitialBooks(allBooks)
     // .catch(error => console.log('error', error))
