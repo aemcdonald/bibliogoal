@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import BookCard from '../../BookCard/BookCard';
 import { connect } from 'react-redux';
 import { getInitialBooks } from '../../actions';
 import { getBooks } from '../../apiCalls.js';
@@ -17,13 +18,16 @@ class BookContainer extends Component {
   // refactor to set user message into state depending on where state will be stored
   }
 
+
+
   render() {
     return (
-      <h1>Book Container</h1>
+      <main>
+        <h1>Book Container</h1>
+        <BookCard />
+      </main>
     )
   }
-
-
 }
 
 const mapStateToProps = state => ({
