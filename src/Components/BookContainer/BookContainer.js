@@ -11,18 +11,30 @@ class BookContainer extends Component {
   }
 
   componentDidMount = async () => {
-  const bookList = await getBooks()
-  const allBooks = bookList.results.books
-  this.props.getInitialBooks(allBooks)
-  // .catch(error => console.log('error', error))
-  // refactor to set user message into state depending on where state will be stored
+    const bookList = await getBooks()
+    const allBooks = bookList.results.books
+    this.props.getInitialBooks(allBooks)
+    // .catch(error => console.log('error', error))
+    // refactor to set user message into state depending on where state will be stored
+  }
+
+  displayBooks = () => {
+    return this.props.books.map((book, i) => {
+      return (
+        <BookCard
+          key={i}
+          bookInfo={book}
+        />
+      )
+    })
   }
 
   render() {
+    const bookCards = this.displayBooks();
     return (
       <main>
         <h1>Book Container</h1>
-        <BookCard />
+        <section>{bookCards}</section>
       </main>
     )
   }
