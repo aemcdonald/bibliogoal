@@ -1,21 +1,31 @@
 import React, { Component } from 'react';
 import BookCard from '../../BookCard/BookCard';
 import { connect } from 'react-redux';
-import { getInitialBooks } from '../../actions';
+import { getNYTList, getListName } from '../../actions';
 import { getBooks } from '../../apiCalls.js';
 import './bookContainer.css';
 
 class BookContainer extends Component {
   constructor(props) {
     super(props);
+
+
   }
 
   componentDidMount = async () => {
-    const bookList = await getBooks('Hardcover Fiction')
+    const bookList = await getBooks(this.props.listName)
     const allBooks = bookList.results.books
-    this.props.getInitialBooks(allBooks)
+    this.props.getNYTList(allBooks)
     // .catch(error => console.log('error', error))
     // refactor to set user message into state depending on where state will be stored
+  }
+
+  componentDidUpdate = async (prevProps) => {
+    if (this.props.listName !== prevProps.listName) {
+      const bookList = await getBooks(this.props.listName)
+      const allBooks = bookList.results.books
+      this.props.getNYTList(allBooks)
+    }
   }
 
   displayBooks = () => {
@@ -41,11 +51,13 @@ class BookContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-  books: state.books
+  books: state.books,
+  listName: state.listName
 })
 
 const mapDispatchToProps = dispatch => ({
-  getInitialBooks: books => dispatch(getInitialBooks(books))
+  getNYTList: books => dispatch(getNYTList(books)),
+  getListName: listName => dispatch(getListName(listName))
 })
 
 export default connect(
