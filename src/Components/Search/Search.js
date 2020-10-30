@@ -1,17 +1,51 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { getListName } from '../../actions';
+import { getBooks } from '../../apiCalls.js';
 import './Search.css';
 
 class Search extends Component {
-  constructor() {
-    super();
-    this.state = {}
+  constructor(props) {
+    super(props);
+  }
+
+  getSearchList = (event) => {
+    this.props.getListName(this.state.listName)
+  }
+
+  updateValue = (event) => {
+    this.setState({listName: event.target.value})
   }
 
   render() {
     return (
-      <h3>Search goes here</h3>
+      <div className='search'>
+        <select
+        className='search-menu'
+        name='list-genre'
+        onChange={this.updateValue}
+        >
+          <option value=''>Choose a List to Browse</option>
+          <option value='Hardcover Fiction'>Fiction</option>
+          <option value='Hardcover Nonfiction'>Nonfiction</option>
+          <option value='Celebrities'>Celebrities</option>
+          <option value='Crime and Punishment'>Crime Fiction</option>
+        </select>
+        <button className='search-submit' type='button' onClick={this.getSearchList}>Submit</button>
+      </div>
     )
   }
 }
 
-export default Search;
+const mapStateToProps = state => ({
+  listName: state.listName
+})
+
+const mapDispatchToProps = dispatch => ({
+  getListName: listName => dispatch(getListName(listName))
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Search)
