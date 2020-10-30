@@ -1,11 +1,10 @@
 import { combineReducers } from 'redux';
 import { books } from './books';
-//will import all reducers here as their own import line
-
+import { listName } from './list';
 
 const allReducers = combineReducers({
-  //w/e name you want: import name
-  books
+  books,
+  listName
 })
 
 export default allReducers;
