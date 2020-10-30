@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import BookCard from '../../BookCard/BookCard';
 import { connect } from 'react-redux';
-import { getNYTList } from '../../actions';
+import { getNYTList, addToRead } from '../../actions';
 import { getBooks } from '../../apiCalls.js';
 import './bookContainer.css';
 
@@ -26,12 +26,20 @@ class BookContainer extends Component {
     }
   }
 
+  addToToReadList = (event) => {
+    let foundBook = this.props.books.find(book => {
+      return book.title === event.target.value
+    })
+    this.props.addToRead(foundBook)
+  }
+
   displayBooks = () => {
     return this.props.books.map((book, i) => {
       return (
         <BookCard
           key={i}
           bookInfo={book}
+          addToToReadList={this.addToToReadList}
         />
       )
     })
@@ -50,11 +58,13 @@ class BookContainer extends Component {
 
 const mapStateToProps = state => ({
   books: state.books,
-  listName: state.listName
+  listName: state.listName,
+  toReadList: state.toReadList
 })
 
 const mapDispatchToProps = dispatch => ({
   getNYTList: books => dispatch(getNYTList(books)),
+  addToRead: foundBook => dispatch(addToRead(foundBook)),
 })
 
 export default connect(
