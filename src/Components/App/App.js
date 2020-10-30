@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import {useSelector, useDispatch} from 'react-redux';
-import { getInitialBooks } from '../../actions';
+import { getNYTList } from '../../actions';
 import Search from '../Search/Search';
 import BookContainer from '../BookContainer/BookContainer';
 import { connect } from 'react-redux';
@@ -37,7 +37,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  getInitialBooks: books => dispatch(getInitialBooks(books))
+  getNYTList: books => dispatch(getNYTList(books))
 })
 
 export default connect(
