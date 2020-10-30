@@ -1,22 +1,20 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { getListName } from '../../actions';
 import { getBooks } from '../../apiCalls.js';
 import './Search.css';
 
 class Search extends Component {
-  constructor() {
-    super();
-    this.state = {
-      list: ''
-    }
+  constructor(props) {
+    super(props);
   }
 
-  getSearchList = async (event) => {
-    let listName = this.state.list
-    await getBooks(listName);
+  getSearchList = (event) => {
+    this.props.getListName(this.state.listName)
   }
 
   updateValue = (event) => {
-    this.setState({list: event.target.value})
+    this.setState({listName: event.target.value})
   }
 
   render() {
@@ -39,4 +37,15 @@ class Search extends Component {
   }
 }
 
-export default Search;
+const mapStateToProps = state => ({
+  listName: state.listName
+})
+
+const mapDispatchToProps = dispatch => ({
+  getListName: listName => dispatch(getListName(listName))
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Search)
