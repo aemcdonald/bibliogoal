@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import BookCard from '../../BookCard/BookCard';
 import { connect } from 'react-redux';
-import { getNYTList, getListName } from '../../actions';
+import { getNYTList } from '../../actions';
 import { getBooks } from '../../apiCalls.js';
 import './bookContainer.css';
 
 class BookContainer extends Component {
   constructor(props) {
     super(props);
-
-
   }
 
   componentDidMount = async () => {
@@ -57,7 +55,6 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   getNYTList: books => dispatch(getNYTList(books)),
-  getListName: listName => dispatch(getListName(listName))
 })
 
 export default connect(
