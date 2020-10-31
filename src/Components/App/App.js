@@ -4,6 +4,7 @@ import { Route, Link } from 'react-router-dom';
 import { getNYTList } from '../../actions';
 import Search from '../Search/Search';
 import BookContainer from '../BookContainer/BookContainer';
+import HaveRead from '../HaveRead/HaveRead';
 import { connect } from 'react-redux';
 import { getBooks } from '../../apiCalls.js';
 import './App.css';
@@ -13,7 +14,7 @@ class App extends Component {
     super(props);
   }
 
-  
+
 
   render() {
     return (
@@ -21,6 +22,7 @@ class App extends Component {
         <h1 className='title'>BiblioGoal</h1>
         <Search />
         <BookContainer />
+        <HaveRead />
       </main>
     )
   }
