@@ -5,6 +5,7 @@ import { getNYTList } from '../../actions';
 import Search from '../Search/Search';
 import BookContainer from '../BookContainer/BookContainer';
 import HaveRead from '../HaveRead/HaveRead';
+import ToRead from '../ToRead';
 import { connect } from 'react-redux';
 import { getBooks } from '../../apiCalls.js';
 import './App.css';
@@ -19,10 +20,17 @@ class App extends Component {
   render() {
     return (
       <main>
-        <h1 className='title'>BiblioGoal</h1>
-        <Search />
-        <BookContainer />
-        <HaveRead />
+        <Route exact path='/'>
+          <h1 className='title'>BiblioGoal</h1>
+          <Search />
+          <BookContainer />
+        </Route>
+        <Route exact path='/have-read'>
+          <HaveRead />
+        </ Route>
+        <Route exact path='/to-read'>
+          <ToRead />
+        </ Route>
       </main>
     )
   }
