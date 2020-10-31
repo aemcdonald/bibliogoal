@@ -5,7 +5,7 @@ import { getNYTList } from '../../actions';
 import Search from '../Search/Search';
 import BookContainer from '../BookContainer/BookContainer';
 import HaveRead from '../HaveRead/HaveRead';
-import ToRead from '../ToRead';
+import ToRead from '../ToRead/ToRead';
 import { connect } from 'react-redux';
 import { getBooks } from '../../apiCalls.js';
 import './App.css';
