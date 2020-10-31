@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
+import { Route, Link } from 'react-router-dom';
 // import {useSelector, useDispatch} from 'react-redux';
 import { getNYTList } from '../../actions';
 import Search from '../Search/Search';
 import BookContainer from '../BookContainer/BookContainer';
+import HaveRead from '../HaveRead/HaveRead';
+import ToRead from '../ToRead';
 import { connect } from 'react-redux';
 import { getBooks } from '../../apiCalls.js';
 import './App.css';
@@ -12,21 +15,25 @@ class App extends Component {
     super(props);
   }
 
-  // componentDidMount = async () => {
-  // const bookList = await getBooks()
-  // const allBooks = bookList.results.books
-  // this.props.getInitialBooks(allBooks)
-  // // .catch(error => console.log('error', error))
-  // // refactor to set user message into state depending on where state will be stored
-  //
-  // }
-
   render() {
     return (
       <main>
         <h1 className='title'>BiblioGoal</h1>
-        <Search />
-        <BookContainer />
+      <nav>
+        <Link to='/'>Home</Link>
+        <Link to='/have-read'>Books I Have Read</Link>
+        <Link to='/to-read'>Books To Read</Link>
+      </nav>
+        <Route exact path='/'>
+          <Search />
+          <BookContainer />
+        </Route>
+        <Route exact path='/have-read'>
+          <HaveRead />
+        </ Route>
+        <Route exact path='/to-read'>
+          <ToRead />
+        </ Route>
       </main>
     )
   }
