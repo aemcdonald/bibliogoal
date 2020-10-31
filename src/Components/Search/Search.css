@@ -3,13 +3,16 @@
   margin-left: 25px;
   padding: 10px;
   border-radius: 15px;
-  text-decoration: none; 
+  text-decoration: none;
   font-family: 'Special Elite', cursive;
+  cursor: pointer;
 }
 
 .search-submit {
   font-size: 25px;
   padding: 10px;
+  margin-left: 10px;
   border-radius: 15px;
   font-family: 'Special Elite', cursive;
+  cursor: pointer;
 }

@@ -7,7 +7,7 @@ const BookCard = ({ bookInfo, addToToReadList } ) => {
       <img className='bookcover' src={bookInfo.book_image} alt='front cover of book'/>
       <section className='bookdata'>
         <div className='bookinfo'>
-          <h5 className='booktitle'>Title: {bookInfo.title}</h5>
+          <h5 className='booktitle'>Title: <br></br> {bookInfo.title}</h5>
           <h5 className='author'>Author: {bookInfo.author}</h5>
           <h5 className='rank'>Rank: {bookInfo.rank}</h5>
         </div>
