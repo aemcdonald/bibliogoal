@@ -25,7 +25,7 @@ const HaveRead = ({ haveReadList }) => {
 }
 
 const mapStateToProps = state => ({
-  toReadList: state.toReadList
+  haveReadList: state.haveReadList
 })
 
 
