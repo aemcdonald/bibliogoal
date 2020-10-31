@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Route, Link } from 'react-router-dom';
 // import {useSelector, useDispatch} from 'react-redux';
 import { getNYTList } from '../../actions';
 import Search from '../Search/Search';
@@ -12,14 +13,7 @@ class App extends Component {
     super(props);
   }
 
-  // componentDidMount = async () => {
-  // const bookList = await getBooks()
-  // const allBooks = bookList.results.books
-  // this.props.getInitialBooks(allBooks)
-  // // .catch(error => console.log('error', error))
-  // // refactor to set user message into state depending on where state will be stored
-  //
-  // }
+  
 
   render() {
     return (
