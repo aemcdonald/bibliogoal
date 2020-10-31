@@ -1,10 +1,33 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import BookCard from '../BookCard/BookCard';
 import './HaveRead.css';
 
-const HaveRead = () => {
+const HaveRead = ({ haveReadList }) => {
+  const displayHaveReadBooks = () => {
+    if (haveReadList.length > 0) {
+      return haveReadList.map((book, i) => {
+        return (
+          <BookCard
+            key={i}
+            bookInfo={book}
+          />
+        )
+      })
+    } else {
+      return (<h3>You have not added any books, add some books!</h3>)
+    }
+  }
+
   return (
-    <h1>Have Read</h1>
+    <h1>{displayHaveReadBooks()}</h1>
   )
 }
 
-export default HaveRead;
+const mapStateToProps = state => ({
+  haveReadList: state.haveReadList
+})
+
+export default connect(
+  mapStateToProps
+)(HaveRead);
