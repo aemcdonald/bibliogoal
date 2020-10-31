@@ -29,7 +29,7 @@ class Search extends Component {
           <option value='Hardcover Fiction'>Fiction</option>
           <option value='Hardcover Nonfiction'>Nonfiction</option>
           <option value='Celebrities'>Celebrities</option>
-          <option value='Crime and Punishment'>Crime Fiction</option>
+          <option value='Crime and Punishment'>Crime and Punishment</option>
         </select>
         <button className='search-submit' type='button' onClick={this.getSearchList}>Submit</button>
       </div>
