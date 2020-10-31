@@ -25,8 +25,9 @@ const HaveRead = ({ haveReadList }) => {
 }
 
 const mapStateToProps = state => ({
-  haveReadList: state.haveReadList
+  toReadList: state.toReadList
 })
+
 
 export default connect(
   mapStateToProps
