@@ -1,12 +1,15 @@
 .search-menu {
   font-size: 25px;
-  margin: 10px;
+  margin-left: 25px;
   padding: 10px;
+  border-radius: 15px;
+  text-decoration: none; 
   font-family: 'Special Elite', cursive;
 }
 
 .search-submit {
   font-size: 25px;
   padding: 10px;
+  border-radius: 15px;
   font-family: 'Special Elite', cursive;
 }
