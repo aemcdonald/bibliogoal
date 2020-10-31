@@ -1,9 +1,10 @@
 .bookcard {
   box-sizing: border-box;
+  margin: 5px;
 }
 
 .bookcover {
-  height: auto;
+  height: 390px;
   width: 100%;
   border: none;
   border: 3px solid black;
@@ -27,4 +28,11 @@
 
 .book-btns {
   margin-top: 15px;
+}
+
+.to-read-btn {
+  border-radius: 15px;
+  font-family: 'Special Elite', cursive;
+  padding: 5px;
+  cursor: pointer;
 }
