@@ -1,0 +1,11 @@
+.card-container {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+}
+
+.list-title {
+  font-size: 40px;
+  padding-left: 25px;
+}
