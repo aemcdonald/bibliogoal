@@ -24,7 +24,7 @@ class App extends Component {
   render() {
     return (
       <main>
-        <h1>Bibliogoal</h1>
+        <h1 className='title'>BiblioGoal</h1>
         <Search />
         <BookContainer />
       </main>
