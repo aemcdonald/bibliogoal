@@ -6,6 +6,7 @@ import Search from '../Search/Search';
 import BookContainer from '../BookContainer/BookContainer';
 import HaveRead from '../HaveRead/HaveRead';
 import ToRead from '../ToRead/ToRead';
+import GoalForm from '../GoalForm/GoalForm';
 import { connect } from 'react-redux';
 import { getBooks } from '../../apiCalls.js';
 import './App.css';
@@ -19,6 +20,7 @@ class App extends Component {
     return (
       <main>
         <h1 className='title'>BiblioGoal</h1>
+        <GoalForm />
       <nav>
         <Link to='/'>Home</Link>
         <Link to='/have-read'>Books I Have Read</Link>
