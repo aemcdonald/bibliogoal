@@ -48,10 +48,10 @@ class BookContainer extends Component {
   render() {
     const bookCards = this.displayBooks();
     return (
-      <main>
-        <h1>Book Container</h1>
-        <section>{bookCards}</section>
-      </main>
+      <section>
+        <h1>{this.props.listName}</h1>
+        <section className='card-container'>{bookCards}</section>
+      </section>
     )
   }
 }
