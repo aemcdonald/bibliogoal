@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BookCard from '../../BookCard/BookCard';
+import BookCard from '../BookCard/BookCard';
 import { connect } from 'react-redux';
 import { getNYTList, addToRead, addToHaveRead } from '../../actions';
 import { getBooks } from '../../apiCalls.js';
