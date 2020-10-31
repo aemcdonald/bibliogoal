@@ -47,6 +47,7 @@ class BookContainer extends Component {
           key={i}
           bookInfo={book}
           addToToReadList={this.addToToReadList}
+          addToHaveReadList={this.addToHaveReadList}
         />
       )
     })
@@ -66,12 +67,14 @@ class BookContainer extends Component {
 const mapStateToProps = state => ({
   books: state.books,
   listName: state.listName,
-  toReadList: state.toReadList
+  toReadList: state.toReadList,
+  haveReadList: state.haveReadList
 })
 
 const mapDispatchToProps = dispatch => ({
   getNYTList: books => dispatch(getNYTList(books)),
   addToRead: foundBook => dispatch(addToRead(foundBook)),
+  addToHaveRead: readBook => dispatch(addToHaveRead(readBook))
 })
 
 export default connect(
