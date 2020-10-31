@@ -15,13 +15,16 @@ class App extends Component {
     super(props);
   }
 
-
-
   render() {
     return (
       <main>
+        <h1 className='title'>BiblioGoal</h1>
+      <nav>
+        <Link to='/'>Home</Link>
+        <Link to='/have-read'>Books I Have Read</Link>
+        <Link to='/to-read'>Books To Read</Link>
+      </nav>
         <Route exact path='/'>
-          <h1 className='title'>BiblioGoal</h1>
           <Search />
           <BookContainer />
         </Route>
