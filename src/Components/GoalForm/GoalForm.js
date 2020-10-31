@@ -8,7 +8,14 @@ class GoalForm extends Component {
 
   render() {
     return(
-      <h5>Form goes here</h5>
+      <form>
+        <input
+          type='number'
+          placeholder='Add reading goal'
+          name='userGoal'
+        />
+        <button type='button'>Submit</button>
+      </form>
     )
   }
 }
