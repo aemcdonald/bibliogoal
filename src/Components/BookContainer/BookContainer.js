@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import BookCard from '../../BookCard/BookCard';
 import { connect } from 'react-redux';
-import { getNYTList, addToRead } from '../../actions';
+import { getNYTList, addToRead, addToHaveRead } from '../../actions';
 import { getBooks } from '../../apiCalls.js';
 import './bookContainer.css';
 
@@ -31,6 +31,13 @@ class BookContainer extends Component {
       return book.title === event.target.value
     })
     this.props.addToRead(foundBook)
+  }
+
+  addToHaveReadList = (event) => {
+    let readBook = this.props.books.find(book => {
+      return book.title === event.target.value
+    })
+    this.props.addToHaveRead(readBook)
   }
 
   displayBooks = () => {
