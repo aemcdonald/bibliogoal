@@ -15,7 +15,7 @@ const HaveRead = ({ haveReadList }) => {
         )
       })
     } else {
-      return (<h3>You have not added any books, add some books!</h3>)
+      return (<h3>Your list is empty, add some books that you've read!</h3>)
     }
   }
 
