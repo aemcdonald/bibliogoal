@@ -1,22 +1,17 @@
 import React from 'react';
 import BookCard from './BookCard';
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import { combineReducers, createStore } from 'redux';
 import { Provider } from 'react-redux';
 import allReducers from '../../reducers/index.js'
 
 describe('BookCard', () => {
-  it('render a book card', () => {
+
+
 
 const store = createStore(allReducers);
-// const allReducers = combineReducers({
-//   books,
-//   listName,
-//   toReadList,
-//   haveReadList,
-//   setUserGoal
-// })
 
     const mockBook = {
       book_image: 'mockURL',
@@ -29,6 +24,28 @@ const store = createStore(allReducers);
 
     render(
       <Provider store={store}>
+      <BookCard
+      key={1}
+      bookInfo={mockBook}
+      addToToReadList={mockAddToReadList}
+      addToHaveReadList={mockAddToHaveReadList}
+      />
+      </ Provider>
+    )
+
+
+    it('render a book card', () => {
+
+
+    expect(screen.getByText('Title: mockTitle')).toBeInTheDocument()
+    expect(screen.getByText('Author: mockAuthor')).toBeInTheDocument()
+    expect(screen.getByText('Rank: 5')).toBeInTheDocument()
+  })
+
+  it('should invoke functions on button clicks', () => {
+
+    render(
+      <Provider store={store}>
         <BookCard
           key={1}
           bookInfo={mockBook}
@@ -38,11 +55,9 @@ const store = createStore(allReducers);
       </ Provider>
     )
 
-    expect(screen.getByText('Title: mockTitle')).toBeInTheDocument()
-    expect(screen.getByText('Author: mockAuthor')).toBeInTheDocument()
-    expect(screen.getByText('Rank: 5')).toBeInTheDocument()
-
-
-
+    userEvent.click(screen.getByText('To Read'))
+    expect(mockAddToReadList).toHaveBeenCalledTimes(1)
+    userEvent.click(screen.getByText('Have Read'))
+    expect(mockAddToHaveReadList).toHaveBeenCalledTimes(1)
   })
 })
