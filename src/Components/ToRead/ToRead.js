@@ -1,12 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import BookCard from '../BookCard/BookCard';
-import './HaveRead.css';
+import './ToRead.css';
 
-const HaveRead = ({ haveReadList }) => {
-  const displayHaveReadBooks = () => {
-    if (haveReadList.length > 0) {
-      return haveReadList.map((book, i) => {
+
+const ToRead = ({ toReadList }) => {
+  const displayToReadBooks = () => {
+    if (toReadList.length > 0) {
+      return toReadList.map((book, i) => {
         return (
           <BookCard
             key={i}
@@ -15,20 +16,20 @@ const HaveRead = ({ haveReadList }) => {
         )
       })
     } else {
-      return (<h3>Your list is empty, add some books that you've read!</h3>)
+      return (<h3>Add some books to read!</h3>)
     }
   }
 
   return (
-    <h1>{displayHaveReadBooks()}</h1>
+    <h1>{displayToReadBooks()}</h1>
   )
 }
 
 const mapStateToProps = state => ({
-  haveReadList: state.haveReadList
+  toReadList: state.toReadList
 })
 
 
 export default connect(
   mapStateToProps
-)(HaveRead);
+)(ToRead);

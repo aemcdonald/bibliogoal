@@ -1,9 +1,9 @@
 import React from 'react';
-import BookContainer from './BookContainer';
+import BookCard from './BookCard';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
-describe('BookContainer', () => {
+describe('BookCard', () => {
   it('Should work', () => {
     expect(true).toBe(true);
   })

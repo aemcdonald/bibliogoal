@@ -1,10 +1,10 @@
 import React from 'react';
-import BookContainer from './BookContainer';
+import GoalForm from './GoalForm';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
-describe('BookContainer', () => {
-  it('Should work', () => {
+describe('GoalForm', () => {
+  it('Should pass an initial test', () => {
     expect(true).toBe(true);
   })
 })
