@@ -16,7 +16,7 @@ const ToRead = ({ toReadList }) => {
         )
       })
     } else {
-      return (<h3>You have not added any books, add some books!</h3>)
+      return (<h3>Add some books to read!</h3>)
     }
   }
 
