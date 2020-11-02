@@ -39,4 +39,22 @@ describe('actions', () => {
 
     expect(result).toEqual(expectedAction);
   })
+
+  it('Should have a type of ADD_TOREAD', () => {
+    const toReadBook = {
+        book_image: 'mockURL',
+        title: 'mockTitle',
+        author: 'mockAuthor',
+        rank: '5'
+    }
+
+    const expectedAction = {
+      type: 'ADD_TOREAD',
+      toReadBook: toReadBook
+    }
+
+    const result = actions.addToRead(toReadBook);
+
+    expect(result).toEqual(expectedAction);
+  })
 })
