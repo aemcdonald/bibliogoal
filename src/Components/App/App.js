@@ -20,10 +20,8 @@ class App extends Component {
     return (
       <main>
         <h1 className='title'>BiblioGoal</h1>
-        <nav>
-          <Link to='/'>Home</Link>
-          <Link to='/have-read'>Books I Have Read</Link>
-          <Link to='/to-read'>Books To Read</Link>
+        <nav className='links'>
+          <Link className='homelink' to='/'>Home</Link> || <Link className='have-read-link' to='/have-read'>Books I Have Read</Link> || <Link className='to-read-link' to='/to-read'>Books To Read</Link>
         </nav>
         <GoalForm />
         <Route exact path='/'>
