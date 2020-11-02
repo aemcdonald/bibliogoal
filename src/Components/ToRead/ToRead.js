@@ -21,7 +21,10 @@ const ToRead = ({ toReadList }) => {
   }
 
   return (
-    <h1 className='to-read-display'>{displayToReadBooks()}</h1>
+    <div>
+      <h1 className='to-read-title'>Books To Read</h1>
+      <h1 className='to-read-display'>{displayToReadBooks()}</h1>
+    </div>
   )
 }
 
