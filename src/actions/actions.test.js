@@ -57,4 +57,22 @@ describe('actions', () => {
 
     expect(result).toEqual(expectedAction);
   })
+
+  it('Should have a type of ADD_TOHAVEREAD', () => {
+    const haveReadBook = {
+        book_image: 'mockURL',
+        title: 'mockTitle',
+        author: 'mockAuthor',
+        rank: '5'
+    }
+
+    const expectedAction = {
+      type: 'ADD_TOHAVEREAD',
+      haveReadBook: haveReadBook
+    }
+
+    const result = actions.addToHaveRead(haveReadBook);
+
+    expect(result).toEqual(expectedAction);
+  })
 })
