@@ -75,4 +75,17 @@ describe('actions', () => {
 
     expect(result).toEqual(expectedAction);
   })
+
+  it('Should have a type of CREATE_USERGOAL', () => {
+    const userGoal = 25;
+
+    const expectedAction = {
+      type: 'CREATE_USERGOAL',
+      userGoal: 25
+    }
+
+    const result = actions.createUserGoal(userGoal);
+
+    expect(result).toEqual(expectedAction);
+  })
 })
