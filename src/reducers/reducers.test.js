@@ -46,4 +46,13 @@ describe('listName', () => {
 
     expect(result).toEqual(expected);
   })
+
+  it('Should return state with a listname', () => {
+    const expected = 'Celebrities'
+    const result = listName('Celebrities', {
+      type: 'GET_LISTNAME',
+      listName: expected
+    })
+    expect(result).toEqual(expected);
+  })
 })
