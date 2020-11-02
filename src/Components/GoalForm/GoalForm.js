@@ -26,7 +26,7 @@ class GoalForm extends Component {
           name='userGoal'
           onChange={event => this.handleUserInput(event)}
         />
-        <button type='button' onClick={this.setUserGoal}>Submit</button>
+        <button data-testid='goal-button' type='button' onClick={this.setUserGoal}>Submit</button>
       </form>
     )
   }

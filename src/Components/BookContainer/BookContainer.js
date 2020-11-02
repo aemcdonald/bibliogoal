@@ -68,7 +68,7 @@ class BookContainer extends Component {
     const bookCards = this.displayBooks();
     return (
       <section>
-        <h1 className='list-title'>{this.props.listName}</h1>
+        <h2 data-testid='list-title' className='list-title'>{this.props.listName}</h2>
         <section className='card-container'>{bookCards}</section>
       </section>
     )

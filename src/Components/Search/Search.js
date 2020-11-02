@@ -31,7 +31,7 @@ class Search extends Component {
           <option value='Celebrities'>Celebrities</option>
           <option value='Crime and Punishment'>Crime and Punishment</option>
         </select>
-        <button className='search-submit' type='button' onClick={this.getSearchList}>Submit</button>
+        <button data-testid='search-button' className='search-submit' type='button' onClick={this.getSearchList}>Submit</button>
       </div>
     )
   }
