@@ -9,8 +9,6 @@ import allReducers from '../../reducers/index.js'
 
 describe('BookCard', () => {
 
-
-
 const store = createStore(allReducers);
 
     const mockBook = {
