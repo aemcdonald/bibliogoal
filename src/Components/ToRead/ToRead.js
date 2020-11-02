@@ -21,7 +21,7 @@ const ToRead = ({ toReadList }) => {
   }
 
   return (
-    <h1>{displayToReadBooks()}</h1>
+    <h1 className='to-read-display'>{displayToReadBooks()}</h1>
   )
 }
 
