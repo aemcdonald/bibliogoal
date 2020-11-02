@@ -8,8 +8,11 @@ import * as actions from '../actions';
 //import * as types from '../actions';
 
 
-describe('reducer', () => {
-  it('Should be hooked up properly', () => {
-    expect(true).toBe(true);
+describe('books', () => {
+  it('Should return the initial state', () => {
+    const expected = [];
+    const result = books(undefined, {});
+
+    expect(result).toEqual(expected);
   })
 })
