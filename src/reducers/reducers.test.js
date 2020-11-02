@@ -49,7 +49,7 @@ describe('listName', () => {
 
   it('Should return state with a listname', () => {
     const expected = 'Celebrities'
-    const result = listName('Celebrities', {
+    const result = listName('Hardcover Fiction', {
       type: 'GET_LISTNAME',
       listName: expected
     })
@@ -61,6 +61,15 @@ describe('userGoal', () => {
   it('Should return initial state', () => {
     const expected = '';
     const result = setUserGoal(undefined, '');
+    expect(result).toEqual(expected);
+  })
+
+  it('Should return state with a userGoal', () => {
+    const expected = '25';
+    const result = setUserGoal('10', {
+      type: 'CREATE_USERGOAL',
+      userGoal: expected
+    })
     expect(result).toEqual(expected);
   })
 })
