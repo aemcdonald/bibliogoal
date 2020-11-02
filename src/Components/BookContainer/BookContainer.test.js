@@ -1,6 +1,7 @@
 import React from 'react';
 import BookContainer from './BookContainer';
 import { render, screen, waitFor} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import { combineReducers, createStore } from 'redux';
 import { Provider } from 'react-redux';
@@ -11,7 +12,7 @@ jest.mock('../../apiCalls');
 describe('BookContainer', () => {
   const store = createStore(allReducers);
 
-  it('Should work', async () => {
+  it('Should display a booklist', async () => {
   getBooks.mockResolvedValueOnce({
     results: {
       books: [
@@ -51,4 +52,6 @@ describe('BookContainer', () => {
     expect(rank2).toBeInTheDocument()
     expect(screen.getByText('Hardcover Fiction')).toBeInTheDocument()
   })
+
+  
 })
