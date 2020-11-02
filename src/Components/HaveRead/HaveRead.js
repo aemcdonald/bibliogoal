@@ -20,7 +20,10 @@ const HaveRead = ({ haveReadList }) => {
   }
 
   return (
-    <h1 className='have-read-display'>{displayHaveReadBooks()}</h1>
+    <div>
+      <h1 className='have-read-title'>Books I Have Read</h1>
+      <h1 className='have-read-display'>{displayHaveReadBooks()}</h1>
+    </div>
   )
 }
 

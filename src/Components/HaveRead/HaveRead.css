@@ -4,3 +4,8 @@
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 20px;
 }
+
+.have-read-title {
+  margin-top: 20px;
+  margin-left: 30px;
+}
