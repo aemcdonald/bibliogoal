@@ -1,6 +1,6 @@
 import { books } from './books';
 import { haveRead } from './haveRead';
-import { list } from './list';
+import { listName } from './list';
 import { toRead } from './toRead';
 import { userGoal } from './userGoal';
 
@@ -35,6 +35,15 @@ describe('books', () => {
       type: 'GET_BOOKLIST',
       allBooks: expected
     })
+    expect(result).toEqual(expected);
+  })
+})
+
+describe('listName', () => {
+  it('Should return initial state', () => {
+    const expected = 'Hardcover Fiction';
+    const result = listName(undefined, 'Hardcover Fiction');
+
     expect(result).toEqual(expected);
   })
 })
