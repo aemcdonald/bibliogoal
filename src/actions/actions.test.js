@@ -27,5 +27,16 @@ describe('actions', () => {
     expect(result).toEqual(expectedAction);
   })
 
-  
+  it('Should have a type of GET_LISTNAME', () => {
+    const listName = 'Hardcover Fiction';
+
+    const expectedAction = {
+      type: 'GET_LISTNAME',
+      listName: 'Hardcover Fiction'
+    }
+
+    const result = actions.getListName(listName);
+
+    expect(result).toEqual(expectedAction);
+  })
 })
