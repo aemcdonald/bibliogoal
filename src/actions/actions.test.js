@@ -1,7 +1,31 @@
 import * as actions from './index';
 
 describe('actions', () => {
-  it('Should be hooked up properly', () => {
-    expect(true).toBe(true);
+  it('Should have a type of GET_BOOKLIST', () => {
+    const allBooks = [
+      {
+        book_image: 'mockURL',
+        title: 'mockTitle1',
+        author: 'mockAuthor1',
+        rank: 5
+      },
+      {
+        book_image: 'mockURL',
+        title: 'mockTitle2',
+        author: 'mockAuthor2',
+        rank: 6
+      }
+    ]
+
+    const expectedAction = {
+      type: 'GET_BOOKLIST',
+      allBooks: allBooks
+    }
+
+    const result = actions.getNYTList(allBooks);
+
+    expect(result).toEqual(expectedAction);
   })
+
+  
 })
