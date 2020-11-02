@@ -2,7 +2,7 @@ import { books } from './books';
 import { haveRead } from './haveRead';
 import { listName } from './list';
 import { toRead } from './toRead';
-import { userGoal } from './userGoal';
+import { setUserGoal } from './userGoal';
 
 // import * as actions from '../actions';
 import * as types from '../actions';
@@ -53,6 +53,14 @@ describe('listName', () => {
       type: 'GET_LISTNAME',
       listName: expected
     })
+    expect(result).toEqual(expected);
+  })
+})
+
+describe('userGoal', () => {
+  it('Should return initial state', () => {
+    const expected = '';
+    const result = setUserGoal(undefined, '');
     expect(result).toEqual(expected);
   })
 })
