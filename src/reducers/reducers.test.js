@@ -83,10 +83,10 @@ describe('haveRead', () => {
 
   it('Should return state with an array of books', () => {
     const expected = {
-        book_image: 'mockURL',
-        title: 'mockTitle1',
-        author: 'mockAuthor1',
-        rank: 5
+      book_image: 'mockURL',
+      title: 'mockTitle1',
+      author: 'mockAuthor1',
+      rank: 5
       };
     const result = haveReadList([], {
       type: 'ADD_TOHAVEREAD',
@@ -105,12 +105,12 @@ describe('toRead', () => {
 
   it('Should return state with an array of books', () => {
     const expected = {
-        book_image: 'mockURL',
-        title: 'mockTitle1',
-        author: 'mockAuthor1',
-        rank: 5
-      };
-      
+      book_image: 'mockURL',
+      title: 'mockTitle1',
+      author: 'mockAuthor1',
+      rank: 5
+    };
+
     const result = toReadList([], {
       type: 'ADD_TOREAD',
       toReadBook: expected
@@ -118,9 +118,3 @@ describe('toRead', () => {
     expect(result).toEqual([expected]);
   })
 })
-
-
-//
-
-
-//
