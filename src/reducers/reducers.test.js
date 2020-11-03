@@ -77,12 +77,24 @@ describe('userGoal', () => {
 describe('haveRead', () => {
   it('Should return initial state', () => {
     const expected = [];
-    const result = haveReadList(undefined, [])
+    const result = haveReadList(undefined, {})
     expect(result).toEqual(expected);
   })
 
   it('Should return state with an array of books', () => {
-    
+    const expected = {
+        book_image: 'mockURL',
+        title: 'mockTitle1',
+        author: 'mockAuthor1',
+        rank: 5
+      };
+    const result = haveReadList([], {
+      type: 'ADD_TOHAVEREAD',
+      haveReadBook: expected
+    })
+    expect(result).toEqual([expected]);
   })
 })
+
+
 //
