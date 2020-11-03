@@ -1,5 +1,5 @@
 import { books } from './books';
-import { haveRead } from './haveRead';
+import { haveReadList } from './haveRead';
 import { listName } from './list';
 import { toRead } from './toRead';
 import { setUserGoal } from './userGoal';
@@ -73,3 +73,16 @@ describe('userGoal', () => {
     expect(result).toEqual(expected);
   })
 })
+
+describe('haveRead', () => {
+  it('Should return initial state', () => {
+    const expected = [];
+    const result = haveReadList(undefined, [])
+    expect(result).toEqual(expected);
+  })
+
+  it('Should return state with an array of books', () => {
+    
+  })
+})
+//
