@@ -2,7 +2,7 @@ import React from 'react';
 import Search from './Search';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { combineReducers, createStore } from 'redux';
+import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import allReducers from '../../reducers/index.js';
 

@@ -7,9 +7,6 @@ import PropTypes from 'prop-types';
 import './bookContainer.css';
 
 class BookContainer extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentDidMount = async () => {
     const bookList = await getBooks(this.props.listName)

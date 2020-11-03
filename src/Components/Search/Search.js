@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getListName } from '../../actions';
-import { getBooks } from '../../apiCalls.js';
 import PropTypes from 'prop-types';
 import './Search.css';
 
 class Search extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   getSearchList = (event) => {
     this.props.getListName(this.state.listName)

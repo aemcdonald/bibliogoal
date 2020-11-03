@@ -4,15 +4,13 @@ import './index.css';
 import App from './Components/App/App.js';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore } from 'redux';
 import { BrowserRouter } from 'react-router-dom';
-import { composeWithDevTools } from 'redux-devtools-extension';
 import allReducers from './reducers/index.js';
 
 const store = createStore(
   allReducers,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-  //composeWithDevTools(applyMiddleware(thunk))
 );
 
 ReactDOM.render(

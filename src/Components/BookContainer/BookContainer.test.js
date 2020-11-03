@@ -1,10 +1,9 @@
 import React from 'react';
 import BookContainer from './BookContainer';
 import { render, screen, waitFor} from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
-import { combineReducers, createStore } from 'redux';
-import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';  
 import allReducers from '../../reducers/index.js';
 import { getBooks } from '../../apiCalls';
 jest.mock('../../apiCalls');
@@ -53,5 +52,5 @@ describe('BookContainer', () => {
     expect(screen.getByText('Hardcover Fiction')).toBeInTheDocument()
   })
 
-  
+
 })
