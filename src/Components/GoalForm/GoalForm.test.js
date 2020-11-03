@@ -21,20 +21,4 @@ describe('GoalForm', () => {
     expect(screen.getByPlaceholderText('Add reading goal')).toBeInTheDocument()
     expect(screen.getByText('Submit')).toBeInTheDocument()
   })
-
-  // it('should invoke a function on button click', () => {
-  //
-  //   const mockSetUserGoal = jest.fn()
-  //
-  //   render(
-  //     <Provider store={store}>
-  //       <GoalForm onClick={mockSetUserGoal}/>
-  //     </ Provider>
-  //   )
-  //
-  //   userEvent.type(screen.getByPlaceholderText('Add reading goal'), 5)
-  //
-  //   userEvent.click(screen.getByText('Submit'))
-  //   expect(mockSetUserGoal).toHaveBeenCalled()
-  // })
 })

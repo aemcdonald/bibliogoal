@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './BookCard.css';
+import PropTypes from 'prop-types';
 
 const BookCard = ({ toReadList, haveReadList, bookInfo, addToToReadList, addToHaveReadList } ) => {
 
@@ -10,7 +11,7 @@ const BookCard = ({ toReadList, haveReadList, bookInfo, addToToReadList, addToHa
   let readBook = haveReadList.find(book => {
     return bookInfo.title === book.title
   })
-  
+
   return (
     <div className='bookcard'>
       <img className='bookcover' src={bookInfo.book_image} alt='front cover of book'/>
@@ -41,3 +42,12 @@ export default connect(
   mapStateToProps,
   //mapDispatchToProps
 )(BookCard);
+
+BookCard.propTypes = {
+  toReadList: PropTypes.array,
+  haveReadList: PropTypes.array,
+  bookInfo: PropTypes.object,
+  addToHaveReadList: PropTypes.func,
+  addToToReadList: PropTypes.func
+
+}
