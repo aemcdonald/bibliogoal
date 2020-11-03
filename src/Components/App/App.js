@@ -6,6 +6,7 @@ import HaveRead from '../HaveRead/HaveRead';
 import ToRead from '../ToRead/ToRead';
 import GoalForm from '../GoalForm/GoalForm';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import './App.css';
 
 class App extends Component {
@@ -46,3 +47,9 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps
 )(App)
+
+
+App.propTypes = {
+  userGoal: PropTypes.string,
+  haveReadList: PropTypes.array
+}
