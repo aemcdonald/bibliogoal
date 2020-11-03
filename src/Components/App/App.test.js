@@ -13,6 +13,24 @@ jest.mock('../../apiCalls');
 
 describe('App', () => {
   const store = createStore(allReducers);
+
+  it('should invoke a function on button click', () => {
+
+    const mockSetUserGoal = jest.fn()
+
+    render(
+      <Provider store={store}>
+        <BrowserRouter>
+          <App />
+        </ BrowserRouter>
+      </ Provider>
+    )
+
+    userEvent.type(screen.getByPlaceholderText('Add reading goal'), 5)
+    userEvent.click(screen.getByText('Submit'))
+    expect(screen.getByText('I want to read 5 books!')).toBeInTheDocument()
+  })
+
   // it('Should allow the user to select a new list of books', async () => {
   //
   //   getBooks.mockResolvedValue({
