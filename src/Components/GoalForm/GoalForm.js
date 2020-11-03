@@ -18,15 +18,16 @@ class GoalForm extends Component {
 
   render() {
     return(
-      <form>
+      <form className='goal-form'>
         <input
+          className='number-menu'
           type='number'
           min='1'
           placeholder='Add reading goal'
           name='userGoal'
           onChange={event => this.handleUserInput(event)}
         />
-        <button data-testid='goal-button' type='button' onClick={this.setUserGoal}>Submit</button>
+        <button data-testid='goal-button' className='goal-submit-btn' type='button' onClick={this.setUserGoal}>Submit</button>
       </form>
     )
   }

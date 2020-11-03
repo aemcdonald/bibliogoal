@@ -17,14 +17,12 @@ class App extends Component {
     return (
       <main>
         <h1 className='title'>BiblioGoal</h1>
+        <nav className='links'>
+          <Link className='homelink' to='/'>Home</Link> || <Link className='have-read-link' to='/have-read'>Books I Have Read</Link> || <Link className='to-read-link' to='/to-read'>Books To Read</Link>
+        </nav>
         <GoalForm />
         <p className='goal-text'>I want to read {this.props.userGoal} books!</p>
         <p className='progress-text'>You have read {this.props.haveReadList.length} of {this.props.userGoal} books.</p>
-      <nav>
-        <Link to='/'>Home</Link>
-        <Link to='/have-read'>Books I Have Read</Link>
-        <Link to='/to-read'>Books To Read</Link>
-      </nav>
         <Route exact path='/'>
           <Search />
           <BookContainer />
