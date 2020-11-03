@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getListName } from '../../actions';
 import { getBooks } from '../../apiCalls.js';
+import PropTypes from 'prop-types';
 import './Search.css';
 
 class Search extends Component {
@@ -49,3 +50,7 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Search)
+
+Search.propTypes = {
+  listName: PropTypes.string
+}
