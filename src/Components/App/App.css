@@ -1,6 +1,17 @@
 .title {
   font-size: 60px;
-  margin-left: 25px;
+  /* margin-left: 25px; */
   display: flex;
   justify-content: center;
+}
+
+nav {
+  text-decoration: none;
+  font-size: 30px;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+.homelink, .have-read-link, .to-read-link {
+  color: #000000;
 }
