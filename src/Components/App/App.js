@@ -22,8 +22,10 @@ class App extends Component {
           <Link className='homelink' to='/'>Home</Link> || <Link className='have-read-link' to='/have-read'>Books I Have Read</Link> || <Link className='to-read-link' to='/to-read'>Books To Read</Link>
         </nav>
         <GoalForm />
-        <p className='goal-text'>I want to read {this.props.userGoal} books!</p>
-        <p className='progress-text'>You have read {this.props.haveReadList.length} of {this.props.userGoal} books.</p>
+        {this.props.userGoal &&
+        <p className='progress-text'>You have read {this.props.haveReadList.length} of {this.props.userGoal} books on your list.</p>}
+        {this.props.userGoal && this.props.haveReadList.length >= this.props.userGoal &&
+        <p className='progress-text'>Congratulations! You've met your reading goal!</p>}
         <Route exact path='/'>
           <Search />
           <BookContainer />
@@ -52,4 +54,7 @@ export default connect(
 App.propTypes = {
   userGoal: PropTypes.string,
   haveReadList: PropTypes.array
+
+  // {this.props.userGoal &&
+  // <p className='goal-text'>I want to read {this.props.userGoal} books!</p>}
 }
