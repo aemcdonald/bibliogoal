@@ -3,6 +3,7 @@ import BookCard from '../BookCard/BookCard';
 import { connect } from 'react-redux';
 import { getNYTList, addToRead, addToHaveRead } from '../../actions';
 import { getBooks } from '../../apiCalls.js';
+import PropTypes from 'prop-types';
 import './bookContainer.css';
 
 class BookContainer extends Component {
@@ -81,3 +82,10 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(BookContainer);
+
+BookContainer.propTypes = {
+  books: PropTypes.array,
+  listName: PropTypes.string,
+  toReadList: PropTypes.array,
+  haveReadList: PropTypes.array
+}
