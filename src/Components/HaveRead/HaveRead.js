@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import BookCard from '../BookCard/BookCard';
 import './HaveRead.css';
+import PropTypes from 'prop-types'
 
 const HaveRead = ({ haveReadList }) => {
   const displayHaveReadBooks = () => {
@@ -35,3 +36,7 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps
 )(HaveRead);
+
+HaveRead.propTypes = {
+  haveReadList: PropTypes.array
+}
