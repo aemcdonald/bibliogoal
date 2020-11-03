@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { createUserGoal } from '../../actions';
+import PropTypes from 'prop-types';
 import './GoalForm.css';
 
 class GoalForm extends Component {
@@ -45,3 +46,7 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(GoalForm)
+
+GoalForm.propTypes = {
+  userGoal: PropTypes.string
+}
