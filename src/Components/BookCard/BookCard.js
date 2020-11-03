@@ -3,6 +3,14 @@ import { connect } from 'react-redux';
 import './BookCard.css';
 
 const BookCard = ({ toReadList, haveReadList, bookInfo, addToToReadList, addToHaveReadList } ) => {
+
+  let foundBook = toReadList.find(book => {
+    return bookInfo.title === book.title
+  });
+  let readBook = haveReadList.find(book => {
+    return bookInfo.title === book.title
+  })
+  
   return (
     <div className='bookcard'>
       <img className='bookcover' src={bookInfo.book_image} alt='front cover of book'/>
@@ -13,9 +21,9 @@ const BookCard = ({ toReadList, haveReadList, bookInfo, addToToReadList, addToHa
           <h5 className='rank'>Rank: {bookInfo.rank}</h5>
         </div>
         <div className='book-btns'>
-          {!toReadList.includes(bookInfo) &&
+          {foundBook === undefined &&
           <button className='to-read-btn' type='button' value={bookInfo.title} onClick={event => addToToReadList(event)}>To Read</button>}
-          {!haveReadList.includes(bookInfo) &&
+          {readBook === undefined &&
           <button className='have-read-btn' type='button' value={bookInfo.title} onClick={event => addToHaveReadList(event)}>Have Read</button>}
         </div>
       </section>

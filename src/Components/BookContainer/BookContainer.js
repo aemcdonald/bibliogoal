@@ -30,19 +30,8 @@ class BookContainer extends Component {
     let foundBook = this.props.books.find(book => {
       return book.title === event.target.value
     })
-    if(!this.props.toReadList.includes(foundBook)) {
-      this.props.addToRead(foundBook)
-    }
+    this.props.addToRead(foundBook)
   }
-
-//   addToToReadList = (event) => {
-//     let foundBook = this.props.books.find(book => {
-//       return book.title === event.target.value
-//     })
-//     if(!this.props.toReadList.includes(foundBook) {
-//       this.props.addToRead(foundBook)
-//     }
-// }
 
   addToHaveReadList = (event) => {
     let readBook = this.props.books.find(book => {
@@ -68,7 +57,7 @@ class BookContainer extends Component {
     const bookCards = this.displayBooks();
     return (
       <section>
-        <h1 className='list-title'>{this.props.listName}</h1>
+        <h2 data-testid='list-title' className='list-title'>{this.props.listName}</h2>
         <section className='card-container'>{bookCards}</section>
       </section>
     )
