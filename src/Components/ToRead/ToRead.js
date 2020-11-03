@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import BookCard from '../BookCard/BookCard';
+import PropTypes from 'prop-types';
 import './ToRead.css';
 
 
@@ -36,3 +37,7 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps
 )(ToRead);
+
+ToRead.propTypes = {
+  toReadList: PropTypes.array
+}
