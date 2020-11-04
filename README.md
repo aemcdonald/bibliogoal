@@ -36,6 +36,11 @@ In your terminal:
 2. Install NPM packages- `npm install`
 3. Start application- `npm start`
 
+## Usage
+
+
+See the [open issues](https://github.com/aemcdonald/bibliogoal/issues) for a list of proposed features and known issues.
+
 ## Contact
 [Ashley McDonald - Developer](https://github.com/aemcdonald)
 
