@@ -17,6 +17,7 @@ class Search extends Component {
     return (
       <div className='search'>
         <select
+        aria-label='Choose a book list to browse here'
         className='search-menu'
         name='list-genre'
         onChange={this.updateValue}
