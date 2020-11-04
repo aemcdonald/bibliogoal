@@ -1,11 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { addToHaveRead } from '../../actions';
 import BookCard from '../BookCard/BookCard';
 import PropTypes from 'prop-types';
 import './ToRead.css';
 
 
-const ToRead = ({ toReadList }) => {
+const ToRead = ({ books, toReadList, addToHaveRead }) => {
+  const addToHaveReadList = (event) => {
+    let readBook = books.find(book => {
+      return book.title === event.target.value
+    })
+    addToHaveRead(readBook)
+  }
+
   const displayToReadBooks = () => {
     if (toReadList.length > 0) {
       return toReadList.map((book, i) => {
@@ -13,6 +21,7 @@ const ToRead = ({ toReadList }) => {
           <BookCard
             key={i}
             bookInfo={book}
+            addToHaveReadList={addToHaveReadList}
           />
         )
       })
@@ -30,14 +39,21 @@ const ToRead = ({ toReadList }) => {
 }
 
 const mapStateToProps = state => ({
-  toReadList: state.toReadList
+  books: state.books,
+  toReadList: state.toReadList,
+  haveReadList: state.haveReadList
 })
 
+const mapDispatchToProps = dispatch => ({
+  addToHaveRead: readBook => dispatch(addToHaveRead(readBook))
+})
 
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(ToRead);
 
 ToRead.propTypes = {
-  toReadList: PropTypes.array
+  toReadList: PropTypes.array,
+  haveReadList: PropTypes.array
 }
