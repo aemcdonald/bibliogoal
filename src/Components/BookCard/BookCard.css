@@ -1,22 +1,20 @@
 .bookcard {
   box-sizing: border-box;
   margin: 5px;
+  margin-bottom: 50px;
 }
 
 .bookcover {
   height: 390px;
   width: 100%;
-  /* border: none; */
-  /* border: 3px solid black; */
   border-radius: 20px;
 }
 
 .bookdata {
   display: flex;
-  justify-content: space-between;
-  border: 3px solid black;
-  border-radius: 20px;
+  justify-content: space-around;
   padding: 0px 10px 0px 10px;
+
 }
 
 .booktitle,
