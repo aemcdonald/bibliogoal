@@ -42,3 +42,8 @@ In your terminal:
 [Naomi - Developer](https://github.com/nware1066)
 
 [Stacy Potten - Developer](https://github.com/stacyp2006)
+
+## Acknowledgements
+Leta Keane and Khalid Williams - The developers would like to thank the Turing Module 3 instructors for their assistance throughout this project.
+
+Our Turing Mentors - Including Turing students Jake West, Ben McClung, Nick Hart and graduate Veronica Andrade for their support during this project.
