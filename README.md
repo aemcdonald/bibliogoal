@@ -19,3 +19,19 @@ BiblioGoal is an application that allows a user to set and track progress toward
 This was a group project assigned during the third module of the Front-End Program at the Turing School of Software and Design. We were tasked to create an application that utilized a technology that was unfamiliar to us. Our group chose to implement Redux for state management as our new technology to learn and explore.
 
 The learning goals of this project included cementing fundamental concepts of React including architecting a React application from scratch, utilizing Redux for global state management, implementing class and functional components and utilizing React Router for path transitions and displays. Robust unit and integration testing was also implemented for each component utilizing the Jest testing suite.
+
+### Built With
+* React
+* Redux
+* JavaScript
+* CSS/HTML
+* React Router
+* Jest
+* Babel
+
+### Installation
+In your terminal:
+1. Clone the repo:
+`git clone git@github.com:aemcdonald/bibliogoal.git`
+2. Install NPM packages- `npm install`
+3. Start application- `npm start`
