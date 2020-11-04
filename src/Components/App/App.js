@@ -50,7 +50,4 @@ export default connect(
 App.propTypes = {
   userGoal: PropTypes.string,
   haveReadList: PropTypes.array
-
-  // {this.props.userGoal &&
-  // <p className='goal-text'>I want to read {this.props.userGoal} books!</p>}
 }
