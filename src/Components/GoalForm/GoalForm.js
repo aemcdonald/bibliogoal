@@ -5,9 +5,6 @@ import PropTypes from 'prop-types';
 import './GoalForm.css';
 
 class GoalForm extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   handleUserInput = (event) => {
     this.setState({ userGoal: event.target.value })

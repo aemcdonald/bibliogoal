@@ -4,10 +4,6 @@ import { listName } from './list';
 import { toReadList } from './toRead';
 import { setUserGoal } from './userGoal';
 
-// import * as actions from '../actions';
-import * as types from '../actions';
-
-
 describe('books', () => {
   it('Should return the initial state', () => {
     const expected = [];

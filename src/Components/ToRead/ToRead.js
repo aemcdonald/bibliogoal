@@ -17,15 +17,15 @@ const ToRead = ({ toReadList }) => {
         )
       })
     } else {
-      return (<h3>Add some books to read!</h3>)
+      return (<p>Add some books to read!</p>)
     }
   }
 
   return (
-    <div>
+    <section>
       <h1 className='to-read-title'>Books To Read</h1>
-      <h1 className='to-read-display'>{displayToReadBooks()}</h1>
-    </div>
+      <div className='to-read-display'>{displayToReadBooks()}</div>
+    </section>
   )
 }
 
