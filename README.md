@@ -35,3 +35,10 @@ In your terminal:
 `git clone git@github.com:aemcdonald/bibliogoal.git`
 2. Install NPM packages- `npm install`
 3. Start application- `npm start`
+
+## Contact
+[Ashley McDonald - Developer](https://github.com/aemcdonald)
+
+[Naomi - Developer](https://github.com/nware1066)
+
+[Stacy Potten - Developer](https://github.com/stacyp2006)
