@@ -26,9 +26,12 @@ describe('App', () => {
       </ Provider>
     )
 
-    userEvent.type(screen.getByPlaceholderText('Add reading goal'), 5)
-    userEvent.click(screen.getByText('Submit'))
-    expect(screen.getByText('I want to read 5 books!')).toBeInTheDocument()
+    userEvent.type(screen.getByPlaceholderText('Add reading goal'), '5')
+    const submits = screen.getAllByText('Submit')
+    expect(submits).toHaveLength(2)
+    userEvent.click(submits[0])
+    
+    expect(screen.getByText('You have read 0 of 5 books on your list.')).toBeInTheDocument();
   })
 
   // it('Should allow the user to select a new list of books', async () => {
