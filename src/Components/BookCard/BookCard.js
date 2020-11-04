@@ -16,9 +16,9 @@ const BookCard = ({ toReadList, haveReadList, bookInfo, addToToReadList, addToHa
       <img className='bookcover' src={bookInfo.book_image} alt='front cover of book'/>
       <section className='bookdata'>
         <div className='bookinfo'>
-          <h5 className='booktitle'>Title: <br></br> {bookInfo.title}</h5>
-          <h5 className='author'>Author: {bookInfo.author}</h5>
-          <h5 className='rank'>Rank: {bookInfo.rank}</h5>
+          <h3 className='booktitle'>Title: <br></br> {bookInfo.title}</h3>
+          <p className='author'>Author: {bookInfo.author}</p>
+          <p className='rank'>Rank: {bookInfo.rank}</p>
         </div>
         <div className='book-btns'>
           {foundBook === undefined && readBook === undefined &&
