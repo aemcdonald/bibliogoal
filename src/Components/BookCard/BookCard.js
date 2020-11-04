@@ -22,7 +22,7 @@ const BookCard = ({ toReadList, haveReadList, bookInfo, addToToReadList, addToHa
           <h5 className='rank'>Rank: {bookInfo.rank}</h5>
         </div>
         <div className='book-btns'>
-          {foundBook === undefined &&
+          {foundBook === undefined && readBook === undefined &&
           <button className='to-read-btn' type='button' value={bookInfo.title} onClick={event => addToToReadList(event)}>To Read</button>}
           {readBook === undefined &&
           <button className='have-read-btn' type='button' value={bookInfo.title} onClick={event => addToHaveReadList(event)}>Have Read</button>}
