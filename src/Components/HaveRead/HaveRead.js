@@ -32,7 +32,6 @@ const mapStateToProps = state => ({
   haveReadList: state.haveReadList
 })
 
-
 export default connect(
   mapStateToProps
 )(HaveRead);

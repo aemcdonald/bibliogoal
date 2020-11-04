@@ -18,5 +18,5 @@ describe('GoalForm', () => {
     )
     expect(screen.getByPlaceholderText('Add reading goal')).toBeInTheDocument()
     expect(screen.getByText('Submit')).toBeInTheDocument()
-  })
-})
+  });
+});

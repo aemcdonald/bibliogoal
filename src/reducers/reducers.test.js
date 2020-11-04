@@ -10,7 +10,7 @@ describe('books', () => {
     const result = books(undefined, {});
 
     expect(result).toEqual(expected);
-  })
+  });
 
   it('should return state with a booklist', () => {
     const expected = [
@@ -32,8 +32,8 @@ describe('books', () => {
       allBooks: expected
     })
     expect(result).toEqual(expected);
-  })
-})
+  });
+});
 
 describe('listName', () => {
   it('Should return initial state', () => {
@@ -41,7 +41,7 @@ describe('listName', () => {
     const result = listName(undefined, 'Hardcover Fiction');
 
     expect(result).toEqual(expected);
-  })
+  });
 
   it('Should return state with a listname', () => {
     const expected = 'Celebrities'
@@ -50,15 +50,15 @@ describe('listName', () => {
       listName: expected
     })
     expect(result).toEqual(expected);
-  })
-})
+  });
+});
 
 describe('userGoal', () => {
   it('Should return initial state', () => {
     const expected = '';
     const result = setUserGoal(undefined, '');
     expect(result).toEqual(expected);
-  })
+  });
 
   it('Should return state with a userGoal', () => {
     const expected = '25';
@@ -67,15 +67,15 @@ describe('userGoal', () => {
       userGoal: expected
     })
     expect(result).toEqual(expected);
-  })
-})
+  });
+});
 
 describe('haveRead', () => {
   it('Should return initial state', () => {
     const expected = [];
     const result = haveReadList(undefined, {})
     expect(result).toEqual(expected);
-  })
+  });
 
   it('Should return state with an array of books', () => {
     const expected = {
@@ -89,15 +89,15 @@ describe('haveRead', () => {
       haveReadBook: expected
     })
     expect(result).toEqual([expected]);
-  })
-})
+  });
+});
 
 describe('toRead', () => {
   it('Should return initial state', () => {
     const expected = [];
     const result = toReadList(undefined, {})
     expect(result).toEqual(expected);
-  })
+  });
 
   it('Should return state with an array of books', () => {
     const expected = {
@@ -112,5 +112,5 @@ describe('toRead', () => {
       toReadBook: expected
     })
     expect(result).toEqual([expected]);
-  })
-})
+  });
+});

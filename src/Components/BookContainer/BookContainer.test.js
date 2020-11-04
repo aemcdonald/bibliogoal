@@ -3,7 +3,7 @@ import BookContainer from './BookContainer';
 import { render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { createStore } from 'redux';
-import { Provider } from 'react-redux';  
+import { Provider } from 'react-redux';
 import allReducers from '../../reducers/index.js';
 import { getBooks } from '../../apiCalls';
 jest.mock('../../apiCalls');
@@ -50,7 +50,5 @@ describe('BookContainer', () => {
     const rank2 = await waitFor(() => screen.getByText('Rank: 6'))
     expect(rank2).toBeInTheDocument()
     expect(screen.getByText('Hardcover Fiction')).toBeInTheDocument()
-  })
-
-
-})
+  });
+});

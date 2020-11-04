@@ -1,4 +1,4 @@
-import { GET_LISTNAME } from '../actions/index.js'
+import { GET_LISTNAME } from '../actions/index.js';
 
 export const listName = (state = 'Hardcover Fiction', action) => {
   switch(action.type) {

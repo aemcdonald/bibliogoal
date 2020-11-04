@@ -1,4 +1,4 @@
-import { GET_BOOKLIST } from '../actions'
+import { GET_BOOKLIST } from '../actions';
 
 export const books = (state = [], action) => {
   switch(action.type) {

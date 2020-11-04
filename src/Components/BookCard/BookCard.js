@@ -4,7 +4,6 @@ import './BookCard.css';
 import PropTypes from 'prop-types';
 
 const BookCard = ({ toReadList, haveReadList, bookInfo, addToToReadList, addToHaveReadList } ) => {
-
   let foundBook = toReadList.find(book => {
     return bookInfo.title === book.title
   });
@@ -32,7 +31,6 @@ const BookCard = ({ toReadList, haveReadList, bookInfo, addToToReadList, addToHa
   )
 }
 
-
 const mapStateToProps = state => ({
   toReadList: state.toReadList,
   haveReadList: state.haveReadList
@@ -40,7 +38,6 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  //mapDispatchToProps
 )(BookCard);
 
 BookCard.propTypes = {
@@ -49,5 +46,4 @@ BookCard.propTypes = {
   bookInfo: PropTypes.object,
   addToHaveReadList: PropTypes.func,
   addToToReadList: PropTypes.func
-
 }

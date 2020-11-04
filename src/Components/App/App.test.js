@@ -1,4 +1,4 @@
-import { render, screen, waitFor, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import App from './App';
 import { createStore } from 'redux';
 import allReducers from '../../reducers/index.js';
@@ -7,15 +7,11 @@ import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import { getBooks } from '../../apiCalls';
-jest.mock('../../apiCalls');
 
 describe('App', () => {
   const store = createStore(allReducers);
 
-  it('should invoke a function on button click', () => {
-
-    const mockSetUserGoal = jest.fn()
+  it('should display a user goal message to the user after submitting a goal', () => {
 
     render(
       <Provider store={store}>
