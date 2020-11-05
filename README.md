@@ -51,7 +51,7 @@ See the [open issues](https://github.com/aemcdonald/bibliogoal/issues) for a lis
 ## Contact
 [Ashley McDonald - Developer](https://github.com/aemcdonald)
 
-[Naomi - Developer](https://github.com/nware1066)
+[Naomi Ware - Developer](https://github.com/nware1066)
 
 [Stacy Potten - Developer](https://github.com/stacyp2006)
 
