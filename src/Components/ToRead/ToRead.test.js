@@ -17,5 +17,5 @@ describe('ToRead', () => {
       </Provider>
     )
     expect(screen.getByText('Add some books to read!')).toBeInTheDocument()
-  })
-})
+  });
+});

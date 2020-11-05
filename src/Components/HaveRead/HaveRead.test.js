@@ -17,5 +17,5 @@ describe('HaveRead', () => {
       </Provider>
     )
     expect(screen.getByText('Your list is empty, add some books that you\'ve read!')).toBeInTheDocument()
-  })
-})
+  });
+});

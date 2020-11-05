@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import './GoalForm.css';
 
 class GoalForm extends Component {
-
   handleUserInput = (event) => {
     this.setState({ userGoal: event.target.value })
   }
@@ -18,6 +17,7 @@ class GoalForm extends Component {
     return(
       <form className='goal-form'>
         <input
+          aria-label='Type your annual book goal here'
           className='number-menu'
           type='number'
           min='1'

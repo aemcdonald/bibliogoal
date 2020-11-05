@@ -1,4 +1,4 @@
-import { CREATE_USERGOAL } from '../actions'
+import { CREATE_USERGOAL } from '../actions';
 
 export const setUserGoal = (state = '', action) => {
   switch(action.type) {

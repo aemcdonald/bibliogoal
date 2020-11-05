@@ -6,7 +6,6 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import allReducers from '../../reducers/index.js';
 
-
 describe('Search', () => {
   it('Should render a search form', () => {
 
@@ -23,5 +22,5 @@ describe('Search', () => {
     expect(screen.getByRole('button', {name: 'Submit'})).toBeInTheDocument()
     expect(screen.getByRole('combobox')).toBeInTheDocument()
     expect(dropDown).toHaveLength(5)
-  })
-})
+  });
+});

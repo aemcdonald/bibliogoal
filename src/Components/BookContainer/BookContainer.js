@@ -7,13 +7,11 @@ import PropTypes from 'prop-types';
 import './bookContainer.css';
 
 class BookContainer extends Component {
-
   componentDidMount = async () => {
     const bookList = await getBooks(this.props.listName)
+    .catch(error => console.log(error))
     const allBooks = bookList.results.books
     this.props.getNYTList(allBooks)
-    // .catch(error => console.log('error', error))
-    // refactor to set user message into state depending on where state will be stored
   }
 
   componentDidUpdate = async (prevProps) => {

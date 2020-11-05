@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import './Search.css';
 
 class Search extends Component {
-
   getSearchList = (event) => {
     this.props.getListName(this.state.listName)
   }
@@ -18,6 +17,7 @@ class Search extends Component {
     return (
       <div className='search'>
         <select
+        aria-label='Choose a book list to browse here'
         className='search-menu'
         name='list-genre'
         onChange={this.updateValue}
