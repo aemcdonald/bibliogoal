@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+<br />
+<p align="center">
+  <a href="https://github.com/aemcdonald/bibliogoal">
+    <img src="/src/BiblioGoal3.gif" alt="moving image of application in use" width="600">
+  </a>
+  <h3 align="center">BiblioGoal</h3>
+  <p align="center">
+    A Turing School Mod 3 Group Project
+    <br />
+    <a href="https://github.com/aemcdonald/bibliogoal"><strong>Repo Link</strong></a>
+    <br />
+    <br />
+  </p>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About The Project
+BiblioGoal is an application that allows a user to set and track progress toward their reading goal. A user can set their reading goal, create a list of books they wish to read and track a list of books that they have read while viewing progress made toward their goal.
 
-## Available Scripts
+This was a group project assigned during the third module of the Front-End Program at the Turing School of Software and Design. We were tasked to create an application that utilized a technology that was unfamiliar to us. Our group chose to implement Redux for state management as our new technology to learn and explore.
 
-In the project directory, you can run:
+The learning goals of this project included cementing fundamental concepts of React including architecting a React application from scratch, utilizing Redux for global state management, implementing class and functional components and utilizing React Router for path transitions and displays. Robust unit and integration testing was also implemented for each component utilizing the Jest testing suite.
 
-### `npm start`
+### Built With
+* React
+* Redux
+* JavaScript
+* CSS/HTML
+* React Router
+* Jest
+* Babel
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Installation
+In your terminal:
+1. Clone the repo:
+`git clone git@github.com:aemcdonald/bibliogoal.git`
+2. Install NPM packages- `npm install`
+3. Start application- `npm start`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Usage
+### Selecting A Reading Goal & Adding Books That Have Been Read
+![Giphy of Reading Goal & Have Read List](/src/BiblioGoal1.gif)
 
-### `npm test`
+### Selecting A BookList To Browse
+![Giphy of Selecting a Booklist To Browse](/src/BiblioGoal3.gif)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Adding Books To The To Read List
+![Giphy Adding Books To The To Read List](/src/BiblioGoal2.gif)
 
-### `npm run build`
+See the [open issues](https://github.com/aemcdonald/bibliogoal/issues) for a list of proposed features and known issues.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Contact
+[Ashley McDonald - Developer](https://github.com/aemcdonald)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[Naomi - Developer](https://github.com/nware1066)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[Stacy Potten - Developer](https://github.com/stacyp2006)
 
-### `npm run eject`
+## Acknowledgements
+Leta Keane and Khalid Williams - The developers would like to thank the Turing Module 3 instructors for their assistance throughout this project.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Our Turing Mentors - Including Turing students Jake West, Ben McClung, Nick Hart and alumni Veronica Andrade for their support during this project.
