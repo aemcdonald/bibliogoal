@@ -14,7 +14,7 @@
 </p>
 
 ## About The Project
-BiblioGoal is an application that allows a user to set and track progress toward their reading goal for a year. A user can set their reading goal, create a list of books they wish to read and track a list of books that they have read while viewing progress made toward their goal.
+BiblioGoal is an application that allows a user to set and track progress toward their reading goal. A user can set their reading goal, create a list of books they wish to read and track a list of books that they have read while viewing progress made toward their goal.
 
 This was a group project assigned during the third module of the Front-End Program at the Turing School of Software and Design. We were tasked to create an application that utilized a technology that was unfamiliar to us. Our group chose to implement Redux for state management as our new technology to learn and explore.
 
@@ -51,4 +51,4 @@ See the [open issues](https://github.com/aemcdonald/bibliogoal/issues) for a lis
 ## Acknowledgements
 Leta Keane and Khalid Williams - The developers would like to thank the Turing Module 3 instructors for their assistance throughout this project.
 
-Our Turing Mentors - Including Turing students Jake West, Ben McClung, Nick Hart and graduate Veronica Andrade for their support during this project.
+Our Turing Mentors - Including Turing students Jake West, Ben McClung, Nick Hart and alumni Veronica Andrade for their support during this project.
