@@ -37,7 +37,14 @@ In your terminal:
 3. Start application- `npm start`
 
 ## Usage
+### Selecting A Reading Goal & Adding Books That Have Been Read
+![Giphy of Reading Goal & Have Read List](./src/images/BiblioGoal1.gif)
 
+### Selecting A BookList To Browse
+![Giphy of Selecting a Booklist To Browse](./src/images/BiblioGoal3.gif)
+
+### Adding Books To The To Read List
+![Giphy Adding Books To The To Read List](./src/images/BiblioGoal2.gif)
 
 See the [open issues](https://github.com/aemcdonald/bibliogoal/issues) for a list of proposed features and known issues.
 
