@@ -1,7 +1,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/aemcdonald/bibliogoal">
-    <img src="src/RTJourney1.gif" alt="moving image of application in use" width="600">
+    <img src="./src/images/BiblioGoal3.gif" alt="moving image of application in use" width="600">
   </a>
   <h3 align="center">BiblioGoal</h3>
   <p align="center">
