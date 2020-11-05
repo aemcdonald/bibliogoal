@@ -1,7 +1,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/aemcdonald/bibliogoal">
-    <img src="./src/images/BiblioGoal3.gif" alt="moving image of application in use" width="600">
+    <img src="/src/BiblioGoal3.gif" alt="moving image of application in use" width="600">
   </a>
   <h3 align="center">BiblioGoal</h3>
   <p align="center">
@@ -38,13 +38,13 @@ In your terminal:
 
 ## Usage
 ### Selecting A Reading Goal & Adding Books That Have Been Read
-![Giphy of Reading Goal & Have Read List](./src/images/BiblioGoal1.gif)
+![Giphy of Reading Goal & Have Read List](/src/BiblioGoal1.gif)
 
 ### Selecting A BookList To Browse
-![Giphy of Selecting a Booklist To Browse](./src/images/BiblioGoal3.gif)
+![Giphy of Selecting a Booklist To Browse](/src/BiblioGoal3.gif)
 
 ### Adding Books To The To Read List
-![Giphy Adding Books To The To Read List](./src/images/BiblioGoal2.gif)
+![Giphy Adding Books To The To Read List](/src/BiblioGoal2.gif)
 
 See the [open issues](https://github.com/aemcdonald/bibliogoal/issues) for a list of proposed features and known issues.
 
