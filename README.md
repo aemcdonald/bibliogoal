@@ -51,7 +51,7 @@ See the [open issues](https://github.com/aemcdonald/bibliogoal/issues) for a lis
 ## Contact
 [Ashley McDonald - Developer](https://github.com/aemcdonald)
 
-[Naomi - Developer](https://github.com/nware1066)
+[Naomi Ware - Developer](https://github.com/nware1066)
 
 [Stacy Potten - Developer](https://github.com/stacyp2006)
 
@@ -59,3 +59,6 @@ See the [open issues](https://github.com/aemcdonald/bibliogoal/issues) for a lis
 Leta Keane and Khalid Williams - The developers would like to thank the Turing Module 3 instructors for their assistance throughout this project.
 
 Our Turing Mentors - Including Turing students Jake West, Ben McClung, Nick Hart and alumni Veronica Andrade for their support during this project.
+
+testing changes
+<!--  -->
